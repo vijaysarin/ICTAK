@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<script>
+    function playVideo() {
+        document.getElementById("videoControl").play();
+    }
+
+    function pauseVideo() {
+        document.getElementById("videoControl").pause();
+    }
+
+    function muteAudio() {
+        document.getElementById("videoControl").volume = 0;
+    }
+</script>
+
+<body>
+
+    <video width="600" controls onplay="alert('Playing video...');" id="videoControl">
+  <source src="mov_bbb.mp4" type="video/mp4">
+  <source src="mov_bbb.ogg" type="video/ogg">
+  Your browser does not support HTML5 video.
+</video>
+
+    <p>
+        Video courtesy of
+        <a href="https://www.bigbuckbunny.org/" target="_blank">Big Buck Bunny</a>.
+    </p>
+    <p><input type="button" onclick="playVideo();" value="Play" /></p>
+    <p><input type="button" onclick="pauseVideo();" value="Pause" /></p>
+    <p><input type="button" onclick="muteAudio();" value="Mute" /></p>
+
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html>
+<title>Events Demo</title>
+
+<head>
+</head>
+<script>
+    function onCopyHandler(value) {
+        document.getElementById("result").innerHTML = "Copy Text: " + value;
+    }
+
+    function onCutHandler(value) {
+        document.getElementById("result").innerHTML = "Cut Text: " + value;
+    }
+
+    function onPasteHandler(me) {
+        alert("Text Pasted");
+    }
+</script>
+
+<body>
+    <input type="text" oncopy="onCopyHandler(this.value)" value="Try to copy this text">
+    <br/><br/>
+    <input type="text" oncut="onCutHandler(this.value)" value="Try to cut this text">
+    <br/><br/>
+    <input type="text" onpaste="onPasteHandler()" placeholder="Paste Here...">
+    <br/><br/>
+    <p id="result"></p>
+</body>
+
+</html>
